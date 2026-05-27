@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-<nav class="space-nav">
-    <div class="nav-logo">
-        <span class="pulse-dot"></span> ASTRO-NOMICS //
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html" class="nav-item">Terminal Home</a></li>
-        <li><a href="calculator.html" class="nav-item">Galactic Calc</a></li>
-        <li><a href="plotter.html" class="nav-item">Star Plotter</a></li>
-        <li><a href="tracker.html" class="nav-item">ISS Live Tracker</a></li>
-    </ul>
-</nav>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Sammy Sison">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+        <!-- connect to python page. Use python (brython) instead of javascript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.12.4/brython.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.12.4/brython_stdlib.js"></script>
+
+        <script type="text/python" src="main.py"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <title>Astro-Nomics</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Astro-Nomics</h1>
+            <p>This is a paragraph.</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+            </ul> 
+        </header>
+
+        <nav class="space-nav">
+            <div class="nav-logo">
+                <span class="pulse-dot"></span> ASTRO-NOMICS //
+            </div>
+            <!-- <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Terminal Home</a></li>
+                <li><a href="calculator.html" class="nav-item">Galactic Calc</a></li>
+                <li><a href="plotter.html" class="nav-item">Star Plotter</a></li>
+                <li><a href="tracker.html" class="nav-item">ISS Live Tracker</a></li>
+            </ul> -->
+        </nav>
+
+        <footer>
+        </footer>
+
+    </body>
 </html>
 
