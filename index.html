@@ -18,32 +18,60 @@
         <link rel="stylesheet" href="style.css">
         <title>Astro-Nomics</title>
     </head>
-
-    <body>
-        <header>
-            <h1>Astro-Nomics</h1>
-            <p>This is a paragraph.</p>
-            <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-            </ul> 
-        </header>
+    <body onload="brython(1)">
 
         <nav class="space-nav">
             <div class="nav-logo">
-                <span class="pulse-dot"></span> ASTRO-NOMICS //
+                <span class="pulse-dot"></span> ASTRO-NOMICS // TERMINAL_v1.0
             </div>
-            <!-- <ul class="nav-links">
-                <li><a href="index.html" class="nav-item">Terminal Home</a></li>
-                <li><a href="calculator.html" class="nav-item">Galactic Calc</a></li>
-                <li><a href="plotter.html" class="nav-item">Star Plotter</a></li>
-                <li><a href="tracker.html" class="nav-item">ISS Live Tracker</a></li>
-            </ul> -->
+            <!-- expand on later -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item active">Booking Deck</a></li>
+            </ul>
         </nav>
 
+        <main class="terminal-container">
+            <section class="input-panel">
+                <h2>// PASSENGER_DATA_INPUT</h2>
+                <form id="booking-form" onsubmit="return false;">
+                    
+                    <div class="form-group">
+                        <label for="user-mass">EARTH MASS (KG):</label>
+                        <input type="number" id="user-mass" name="mass" placeholder="e.g., 75" required min="1" max="500">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-age">EARTH AGE (YEARS):</label>
+                        <input type="number" id="user-age" name="age" placeholder="e.g., 18" required min="1" max="120">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">CELESTIAL DESTINATION:</label>
+                        <select id="destination" name="destination" required>
+                            <option value="" disabled selected>-- CHOOSE DESTINATION --</option>
+                            <option value="moon">The Moon (Luna)</option>
+                            <option value="mars">Mars (Project Ares)</option>
+                            <option value="jupiter">Jupiter (Gas Giant Logistics)</option>
+                            <option value="titan">Titan (Saturnian Moon)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="process-btn">PROCESS GALACTIC TICKET</button>
+                </form>
+            </section>
+
+            <section class="ticket-display" id="ticket-output">
+                <h2>// GENERATED_PASSPORT_MANIFEST</h2>
+                <div class="ticket-placeholder">
+                    <p>AWAITING PASSENGER CORE METRICS DATA...</p>
+                </div>
+            </section>
+
+        </main>
+
         <footer>
+            <p>&copy; 2026 SAMMY SISON // AEROSPACE LOGISTICS</p>
         </footer>
 
     </body>
 </html>
-
