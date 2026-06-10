@@ -1,77 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Sammy Sison">
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samantha Sison | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <!-- connect to python page. Use python (brython) instead of javascript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.12.4/brython.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.12.4/brython_stdlib.js"></script>
-
-        <script type="text/python" src="main.py"></script>
-
-        <link rel="stylesheet" href="style.css">
-        <title>Astro-Nomics</title>
-    </head>
-    <body onload="brython(1)">
-
-        <nav class="space-nav">
-            <div class="nav-logo">
-                <span class="pulse-dot"></span> ASTRO-NOMICS // TERMINAL_v1.0
-            </div>
-            <!-- expand on later -->
+    <header class="navbar">
+        <div class="logo">Samantha Sison</div>
+        <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-item active">Booking Deck</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About/CV</a></li>
             </ul>
         </nav>
+    </header>
 
-        <main class="terminal-container">
-            <section class="input-panel">
-                <h2>// PASSENGER_DATA_INPUT</h2>
-                <form id="booking-form" onsubmit="return false;">
-                    
-                    <div class="form-group">
-                        <label for="user-mass">EARTH MASS (KG):</label>
-                        <input type="number" id="user-mass" name="mass" placeholder="e.g., 75" required min="1" max="500">
-                    </div>
+    <main>
+        
+        <section id="hero" class="section-hero">
+            <h1>Hero Hook Title</h1>
+        </section>
 
-                    <div class="form-group">
-                        <label for="user-age">EARTH AGE (YEARS):</label>
-                        <input type="number" id="user-age" name="age" placeholder="e.g., 18" required min="1" max="120">
-                    </div>
+        <section id="projects" class="section-projects">
+            <h2>Projects description</h2>
+        </section>
 
-                    <div class="form-group">
-                        <label for="destination">CELESTIAL DESTINATION:</label>
-                        <select id="destination" name="destination" required>
-                            <option value="" disabled selected>-- CHOOSE DESTINATION --</option>
-                            <option value="moon">The Moon (Luna)</option>
-                            <option value="mars">Mars (Project Ares)</option>
-                            <option value="jupiter">Jupiter (Gas Giant Logistics)</option>
-                            <option value="titan">Titan (Saturnian Moon)</option>
-                        </select>
-                    </div>
+        <section id="about" class="section-about">
+            <h2>About & Experience description</h2>
+        </section>
 
-                    <button type="submit" id="process-btn">PROCESS GALACTIC TICKET</button>
-                </form>
-            </section>
+    </main>
 
-            <section class="ticket-display" id="ticket-output">
-                <h2>// GENERATED_PASSPORT_MANIFEST</h2>
-                <div class="ticket-placeholder">
-                    <p>AWAITING PASSENGER CORE METRICS DATA...</p>
-                </div>
-            </section>
+    <footer class="footer">
+        <p>&copy; Samantha Sison 2026</p>
+    </footer>
 
-        </main>
-
-        <footer>
-            <p>&copy; 2026 SAMMY SISON // AEROSPACE LOGISTICS</p>
-        </footer>
-
-    </body>
+</body>
 </html>

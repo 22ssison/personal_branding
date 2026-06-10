@@ -1,61 +1,112 @@
+:root {
+    --bg-main: #ffffff;        
+    --text-main: #111111;     
+    --text-muted: #767676;     
+    
+    /* Fonts */
+    --font-serif: 'Playfair Display', 'Bodoni Moda', serif; /* modern basic font */
+    --font-sans: 'Inter', sans-serif;                      /* stylish font */
+}
+
+/* Default Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Prevents padding from breaking element widths */
+    box-sizing: border-box;
 }
 
-:root {
-    --bg-darker: #0b0c10;       
-    --bg-terminal: #1f2833;     
-    --accent-neon: #67ded6;     
-    --accent-dim: #45f3ff80;     
-    --text-main: #c5a1ff;       
-    --text-bright: #ffffff;     
-    --font-heading: 'Orbitron', sans-serif;
-    --font-mono: 'Share Tech Mono', monospace;
-}
-
-/* Heading Font = Orbitron */
-h1, h2, .nav-logo {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 2px; }
-
-/* Paragraph Font = Share Tech Mon */
-body, p, input, select, button {
-    font-family: 'Share Tech Mono', monospace;
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-main);
 }
 
 body {
-    background-color: var(--bg-darker);
-    color: var(--accent-neon);
-    font-family: var(--font-mono);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
     overflow-x: hidden;
-    /* effect for authentic CRT space-monitor look */
-    background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    background-size: 100% 4px, 6px 100%;
-}
-
-h1, h2, h3 {
-    font-family: var(--font-heading);
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px var(--accent-dim);
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: opacity 0.3s ease;
 }
 
-/* Quick utility style to keep footer glued to the bottom */
-footer {
-    margin-top: auto;
-    padding: 20px;
+a:hover {
+    opacity: 0.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    border-bottom: 1px solid #e5e5e5; /* thin dividing line */
+    background-color: var(--bg-main);
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 120px 10%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 4rem; 
+    font-weight: 400;
+    line-height: 1.1;
+    margin-top: 10px;
+    max-width: 800px;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.section-tag {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.footer {
+    padding: 40px 5%;
     text-align: center;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    border-top: 1px dashed var(--bg-terminal);
-    color: #555; 
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
 }
