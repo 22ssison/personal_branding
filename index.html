@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,8 +18,10 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About/CV</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#building">Projects</a></li>
+                <li><a href="#interests">Interests</a></li>
             </ul>
         </nav>
     </header>
@@ -27,21 +29,132 @@
     <main>
         
         <section id="hero" class="section-hero">
-            <h1>Hero Hook Title</h1>
-        </section>
-
-        <section id="projects" class="section-projects">
-            <h2>Projects description</h2>
+            <div class="hero-container">
+                <span class="section-tag">S/S 2026 Professional Portfolio</span>
+                <h1 class="hero-title">Samantha Sison</h1>
+                <p class="hero-editorial-lead">Future Finance & Technology Professional</p>
+                <p class="hero-badges">Deputy Head Girl &bull; STEM Advocate &bull; Software Developer &bull; Community Leader</p>
+                <p class="hero-subtitle">Exploring the systemic intersections of Finance, Software Engineering, Artificial Intelligence, Cybersecurity, and Community Impact.</p>
+                <div class="hero-cta-wrapper">
+                    <a href="#about" class="cta-link-editorial">Explore My Journey &rarr;</a>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="section-about">
-            <h2>About & Experience description</h2>
+            <span class="section-tag">01 / Profile</span>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Who is Samantha?</h2>
+                    <p class="editorial-p">Kia ora, I'm Samantha, also known as 'Sammy'. I am a Year 13 student at Wakatipu High School with a passion for technology, finance, leadership, and creating meaningful impact within my community.</p>
+                    <p class="editorial-p">Born in the Philippines and raised in New Zealand, I have always been curious about how systems work—whether that's financial markets, emerging technologies, organisations, or communities.</p>
+                    <p class="editorial-p">I actively seek opportunities that challenge me to grow. From leading students as Deputy Head Girl, speaking alongside CEOs at the Queenstown Women in Business Conference, developing software projects, and contributing youth perspectives to regional initiatives, I believe growth happens when you step forward before you feel completely ready.</p>
+                </div>
+                <div class="stats-panel">
+                    <h3 class="panel-subtitle">Impact by the Numbers</h3>
+                    <ul class="stats-list">
+                        <li><strong> Role:</strong> Deputy Head Girl</li>
+                        <li><strong> Public Speaking:</strong> Women in Business Speaker</li>
+                        <li><strong> Service:</strong> 5+ Years GirlGuidesNZ</li>
+                        <li><strong> Experience:</strong> Technology Internship Completed</li>
+                        <li><strong> Academics:</strong> Excellence-Endorsed Student</li>
+                        <li><strong> Global:</strong> International Science Forum Participant</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="section-journey">
+            <span class="section-tag">02 / Chronology</span>
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline-editorial">
+                <div class="timeline-row">
+                    <div class="time-year">2026</div>
+                    <div class="time-content">
+                        <h4>Deputy Head Girl & Women in Business Speaker</h4>
+                        <p>Leading student initiatives at WHS. Shared the stage alongside business leaders and CEOs discussing confidence, leadership, and youth perspectives. Appointed to the Impact100 Impactship learning global philanthropy and governance.</p>
+                    </div>
+                </div>
+                <div class="timeline-row">
+                    <div class="time-year">2026</div>
+                    <div class="time-content">
+                        <h4>Skyline ICT Internship</h4>
+                        <p>Built a Sentiment Analysis Web Application using AI technologies. Collaborated directly with ICT professionals, cybersecurity teams, and senior board members.</p>
+                    </div>
+                </div>
+                <div class="timeline-row">
+                    <div class="time-year">2025</div>
+                    <div class="time-content">
+                        <h4>Tech For Good & Sustainability Research</h4>
+                        <p>Investigated AI implementation in healthcare with GirlBossNZ. Co-led agricultural water filtration design initiatives with GirlsWhoGrowNZ.</p>
+                    </div>
+                </div>
+                <div class="timeline-row">
+                    <div class="time-year">2022-24</div>
+                    <div class="time-content">
+                        <h4>STEM Competitions & Science Buskers Leadership</h4>
+                        <p>Academic Council contributor. Managed community science communication pipelines and competed across the Brain Bee Neuroscience Challenge, NZAMT, and International Chemistry Quiz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="building" class="section-projects">
+            <span class="section-tag">03 / Engineering</span>
+            <h2 class="section-title">What I'm Building</h2>
+            <div class="project-editorial-grid">
+                <article class="project-card">
+                    <div class="project-image-placeholder"><span class="project-number">01</span></div>
+                    <h3 class="project-name">Sentiment Analysis Interface</h3>
+                    <p class="project-desc">Engineered during the Skyline Tech Internship. Implements Natural Language Processing and data visualization models to classify real-time customer feedback trends.</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-image-placeholder"><span class="project-number">02</span></div>
+                    <h3 class="project-name">Sugar Rush Engine</h3>
+                    <p class="project-desc">A physics simulation game crafted using the Godot Game Engine and managed via GitHub version control to refine clean programming and structural testing routines.</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-image-placeholder"><span class="project-number">03</span></div>
+                    <h3 class="project-name">Wakatipu Youth Trust Website</h3>
+                    <p class="project-desc">Providing voluntary software support to maintain and audit digital spaces, optimizing online user engagement pathways for regional youth populations.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="interests" class="section-interests">
+            <span class="section-tag">04 / Core Focus</span>
+            <h2 class="section-title">Strategic Areas of Interest</h2>
+            <div class="interests-grid">
+                <div class="interest-box">
+                    <h3>💰 Finance & FinTech</h3>
+                    <p>Financial markets, asset management, economic development strategy, and modern business scaling frameworks.</p>
+                </div>
+                <div class="interest-box">
+                    <h3>🤖 Artificial Intelligence</h3>
+                    <p>Machine learning mechanisms, generative engineering protocols, and corporate AI alignment/governance.</p>
+                </div>
+                <div class="interest-box">
+                    <h3>💻 Software Engineering</h3>
+                    <p>Full-stack product design, intuitive user workflows, agile systems design, and problem architecture.</p>
+                </div>
+                <div class="interest-box">
+                    <h3>🔐 Cybersecurity & Law</h3>
+                    <p>Risk mitigation, digital data privacy protection frameworks, technology policy, and cyber law infrastructure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="philosophy" class="section-philosophy">
+            <div class="philosophy-container">
+                <p class="manifesto-quote">"Young women do not need permission to belong. We do not need to wait until we are older, louder, or more certain. Confidence is something we build by choosing to show up before we feel completely ready."</p>
+                <p class="manifesto-subtext">I believe growth happens through action. The opportunities that have shaped me most came from putting my hand up, stepping outside my comfort zone, and embracing challenges before I felt fully prepared.</p>
+            </div>
         </section>
 
     </main>
 
     <footer class="footer">
-        <p>&copy; Samantha Sison 2026</p>
+        <p>&copy; 2026 Samantha Sison </p>
     </footer>
 
 </body>
