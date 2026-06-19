@@ -3,7 +3,6 @@
     --text-main: #121212;
     --text-muted: #666666;
     --border-thin: #e5e5e5;
-    
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
 }
@@ -26,8 +25,6 @@ body {
     line-height: 1.6;
 }
 
-/* layout */
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,7 +33,7 @@ body {
     border-bottom: 1px solid var(--border-thin);
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     z-index: 100;
 }
 
@@ -60,15 +57,27 @@ body {
     font-size: 0.75rem;
     letter-spacing: 1.5px;
     font-weight: 500;
-    transition: opacity 0.3s;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-.nav-links a:hover {
-    opacity: 0.5;
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-main);
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 section {
-    padding: 100px 8%;
+    padding: 120px 8%;
     border-bottom: 1px solid var(--border-thin);
 }
 
@@ -84,21 +93,23 @@ section {
 
 .section-title {
     font-family: var(--font-serif);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
 }
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: 4rem;
+    font-size: 4.5rem; 
     font-weight: 400;
     line-height: 1.1;
     margin: 15px 0;
+    letter-spacing: -1px;
 }
 
 .hero-editorial-lead {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: var(--font-serif);
     font-style: italic;
     color: var(--text-muted);
@@ -110,25 +121,36 @@ section {
     letter-spacing: 1px;
     margin-bottom: 30px;
     font-weight: 500;
+    color: var(--text-muted);
 }
 
 .hero-subtitle {
     max-width: 650px;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
     font-weight: 300;
     margin-bottom: 45px;
 }
+
 
 .cta-link-editorial {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 1.5px;
-    border-bottom: 2px solid var(--text-main);
-    padding-bottom: 5px;
+    border: 1px solid var(--text-main);
+    padding: 15px 30px;
     text-decoration: none;
     color: var(--text-main);
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cta-link-editorial:hover {
+    background-color: var(--text-main);
+    color: var(--bg-main);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .about-grid {
@@ -138,22 +160,30 @@ section {
 }
 
 .editorial-p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 20px;
-    color: #222;
+    color: #1a1a1a;
     font-weight: 300;
+    line-height: 1.7;
 }
 
 .stats-panel {
-    background: #fdfdfd;
+    background: #fbfbfb;
     border: 1px solid var(--border-thin);
-    padding: 30px;
+    padding: 35px;
+    transition: box-shadow 0.4s ease;
+}
+
+.stats-panel:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.02);
 }
 
 .panel-subtitle {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-thin);
+    padding-bottom: 10px;
 }
 
 .stats-list {
@@ -162,11 +192,14 @@ section {
 
 .stats-list li {
     font-size: 0.9rem;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px dashed var(--border-thin);
+    transition: padding-left 0.3s ease;
 }
 
-/* timeline*/
+.stats-list li:hover {
+    padding-left: 5px; 
+}
 
 .timeline-editorial {
     display: flex;
@@ -176,39 +209,48 @@ section {
 .timeline-row {
     display: grid;
     grid-template-columns: 150px 1fr;
-    padding: 25px 0;
+    padding: 30px 0;
     border-top: 1px solid var(--border-thin);
+    transition: background-color 0.3s ease;
+}
+
+.timeline-row:hover {
+    background-color: #fafafa; 
 }
 
 .time-year {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: italic;
+    transition: transform 0.3s ease;
+}
+
+.timeline-row:hover .time-year {
+    transform: translateX(3px);
 }
 
 .time-content h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
 .time-content p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     font-weight: 300;
 }
 
-/* cards */
-
 .project-editorial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 35px;
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .project-image-placeholder {
@@ -216,13 +258,30 @@ section {
     aspect-ratio: 4 / 3;
     background: #f7f7f7;
     border: 1px solid var(--border-thin);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     position: relative;
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    transition: background 0.4s ease;
+    z-index: 1;
 }
 
 .project-card:hover .project-image-placeholder {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+}
+
+.project-card:hover .project-image-placeholder::before {
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .project-number {
@@ -232,22 +291,31 @@ section {
     font-family: var(--font-serif);
     font-style: italic;
     color: #ccc;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-number {
+    color: var(--text-main);
 }
 
 .project-name {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     margin-bottom: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-name {
+    opacity: 0.7;
 }
 
 .project-desc {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
     font-weight: 300;
 }
-
-/* interest floating boxes */
 
 .interests-grid {
     display: grid;
@@ -257,41 +325,50 @@ section {
 
 .interest-box {
     border: 1px solid var(--border-thin);
-    padding: 30px;
-    transition: background 0.3s;
+    padding: 35px;
+    background: var(--bg-main);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Drastic interactive dark layout color flip block */
 .interest-box:hover {
-    background: #fafafa;
+    background: #121212;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .interest-box h3 {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .interest-box p {
     font-size: 0.9rem;
     color: var(--text-muted);
     font-weight: 300;
+    transition: color 0.3s ease;
 }
 
-/* MANIFESTO / PHILOSOPHY */
+.interest-box:hover p {
+    color: #aaaaaa;
+}
 .section-philosophy {
     background: #121212;
     color: #ffffff;
     text-align: center;
-    padding: 120px 15%;
+    padding: 140px 15%;
 }
 
 .manifesto-quote {
     font-family: var(--font-serif);
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.4;
     font-style: italic;
     margin-bottom: 30px;
+    letter-spacing: -0.5px;
 }
 
 .manifesto-subtext {
@@ -300,13 +377,49 @@ section {
     max-width: 700px;
     margin: 0 auto;
     font-weight: 300;
+    line-height: 1.8;
 }
 
 .footer {
     text-align: center;
-    padding: 40px;
+    padding: 50px;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: var(--text-muted);
+    border-top: 1px solid var(--border-thin);
+}
+
+@media (max-width: 900px) {
+    /* Shrink large hero headline so it doesnt clip */
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .about-grid, 
+    .interests-grid,
+    .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .project-editorial-grid {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    
+    /* Tighten section padding for smaller screens */
+    section {
+        padding: 80px 6%;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 6%;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
 }
